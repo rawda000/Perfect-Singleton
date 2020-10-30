@@ -1,21 +1,23 @@
-package Singleton_eager_instantiation;
+package Bill_Pugh_Solution;
 
 /**
- * Thread Safe
+ *  Thread Safe
  */
 public final class CaptainSingleton {
-    private static CaptainSingleton instance = new CaptainSingleton();
-
     private CaptainSingleton() {
         System.out.println("A new Captain has been created");
     }
 
     public static CaptainSingleton getInstance() {
         System.out.println("You have a captain for your team.");
-        return instance;
+        return SingletonHelper.instance;
     }
 
     public static void dummyMethod() {
         System.out.println("Inside dummy method");
+    }
+
+    private static final class SingletonHelper {
+        private static final CaptainSingleton instance = new CaptainSingleton();
     }
 }

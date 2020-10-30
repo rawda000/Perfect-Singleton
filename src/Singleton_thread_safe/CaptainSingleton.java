@@ -1,7 +1,7 @@
 package Singleton_thread_safe;
 
 /**
- * Not Thread Safe
+ * Thread Safe
  */
 public final class CaptainSingleton {
     private static CaptainSingleton instance;
