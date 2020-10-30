@@ -11,6 +11,7 @@ public final class CaptainSingleton {
     }
 
     public static CaptainSingleton getInstance() {
+        System.out.println("You have a captain for your team.");
         return instance;
     }
 
